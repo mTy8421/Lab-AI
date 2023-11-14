@@ -32,7 +32,7 @@ while True:
         print(i, end=" ")
     print("\n")
 
-    for x in range(3):
+    for x in range(length):
         for values in stringList:
             print(obj["stations"][0]["data"][x][values], end=" ")
         print("\n")
