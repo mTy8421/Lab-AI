@@ -12,7 +12,7 @@ print("Station ID: " + obj["stations"][0]["stationID"])
 
 for k, v in obj["stations"][0]["data"][0].items():
     print(k, end=" ")
-
+print("\n")
 for x in range(length):
     for k, v in obj["stations"][0]["data"][x].items():
         print(v, end=" ")
