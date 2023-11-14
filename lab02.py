@@ -25,11 +25,9 @@ while True:
 
     for i in stringList:
         print("Station ID: " + obj["stations"][0]["stationID"])
+        print(i, end=" ")
+    print("\n")
 
-    # for k, v in obj["stations"][0]["data"][0].items():
-    #     print(k, end=" ")
-    # print("\n")
-    # for x in range(length):
-    #     for k, v in obj["stations"][0]["data"][x].items():
-    #         print(v, end=" ")
-    #     print("\n")
+    for x in range(length):
+        for value in obj["stations"][0]["data"][x]:
+            print(value[stringList])
