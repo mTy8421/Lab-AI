@@ -23,11 +23,12 @@ while True:
 
     stringList.append(txt)
 
+    print("Station ID: " + obj["stations"][0]["stationID"])
     for i in stringList:
-        print("Station ID: " + obj["stations"][0]["stationID"])
         print(i, end=" ")
     print("\n")
 
-    for x in range(length):
-        for value in obj["stations"][0]["data"][x]:
-            print(value[stringList])
+    for x in range(3):
+        for values in stringList:
+            print(obj["stations"][0]["data"][x][values], end=" ")
+        print("\n")
