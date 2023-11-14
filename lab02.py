@@ -19,3 +19,17 @@ for x in range(length):
     for k, v in obj["stations"][0]["data"][x].items():
         print(v, end=" ")
     print("\n")
+
+# PM25,PM10,O3,CO,NO2,SO2,WS,WD,TEMP,RH,BP,RAIN
+
+while True:
+    text = input(str("Enter Someting: "))
+    txt = text.upper()
+
+    match txt:
+        case "PM25":
+            print("hello")
+        case "PM10":
+            print("test")
+        case "O3":
+            print("test")
