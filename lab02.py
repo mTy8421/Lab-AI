@@ -10,16 +10,6 @@ length = len(obj["stations"][0]["data"])
 
 print("Station ID: " + obj["stations"][0]["stationID"])
 
-for k, v in obj["stations"][0]["data"][0].items():
-    print(k, end=" ")
-
-print("\n")
-
-for x in range(length):
-    for k, v in obj["stations"][0]["data"][x].items():
-        print(v, end=" ")
-    print("\n")
-
 while True:
     text = input(str("Enter Someting: "))
     txt = text.upper()
@@ -49,3 +39,13 @@ while True:
             print("BP")
         case "RAIN":
             print("RAIN")
+        case _:
+            for k, v in obj["stations"][0]["data"][0].items():
+                print(k, end=" ")
+
+            print("\n")
+
+            for x in range(length):
+                for k, v in obj["stations"][0]["data"][x].items():
+                    print(v, end=" ")
+                print("\n")
