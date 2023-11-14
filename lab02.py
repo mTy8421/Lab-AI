@@ -13,7 +13,7 @@ stringList = []
 while True:
     text = input(
         str(
-            "Type [PM25, PM10, O3, CO, NO2, SO2, WS, WD, TEMP, RH, BP, RAIN] for Show or Type [DEL] for delet list And Type [EXIT] for End : "
+            "Type [DATETIMEDATA, PM25, PM10, O3, CO, NO2, SO2, WS, WD, TEMP, RH, BP, RAIN] for Show or Type [DEL] for delet list And Type [EXIT] for End : "
         )
     )
     txt = text.upper()
