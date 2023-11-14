@@ -20,8 +20,6 @@ for x in range(length):
         print(v, end=" ")
     print("\n")
 
-# PM25,PM10,O3,CO,NO2,SO2,WS,WD,TEMP,RH,BP,RAIN
-
 while True:
     text = input(str("Enter Someting: "))
     txt = text.upper()
@@ -35,3 +33,19 @@ while True:
             print("O3")
         case "CO":
             print("CO")
+        case "NO2":
+            print("NO2")
+        case "SO2":
+            print("SO2")
+        case "WS":
+            print("WS")
+        case "WD":
+            print("WD")
+        case "TEMP":
+            print("TEMP")
+        case "RH":
+            print("RH")
+        case "BP":
+            print("BP")
+        case "RAIN":
+            print("RAIN")
