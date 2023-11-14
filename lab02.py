@@ -8,6 +8,8 @@ obj = json.load(
 )
 length = len(obj["stations"][0]["data"])
 
+stringList = []
+
 while True:
     text = input(
         str(
@@ -16,12 +18,18 @@ while True:
     )
     txt = text.upper()
 
-    print("Station ID: " + obj["stations"][0]["stationID"])
+    if txt == "EXIT":
+        break
 
-    for k, v in obj["stations"][0]["data"][0].items():
-        print(k, end=" ")
-    print("\n")
-    for x in range(length):
-        for k, v in obj["stations"][0]["data"][x].items():
-            print(v, end=" ")
-        print("\n")
+    stringList.append(txt)
+
+    for i in stringList:
+        print("Station ID: " + obj["stations"][0]["stationID"])
+
+    # for k, v in obj["stations"][0]["data"][0].items():
+    #     print(k, end=" ")
+    # print("\n")
+    # for x in range(length):
+    #     for k, v in obj["stations"][0]["data"][x].items():
+    #         print(v, end=" ")
+    #     print("\n")
