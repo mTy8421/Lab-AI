@@ -28,8 +28,10 @@ while True:
 
     match txt:
         case "PM25":
-            print("hello")
+            print("PM25")
         case "PM10":
-            print("test")
+            print("PM10")
         case "O3":
-            print("test")
+            print("O3")
+        case "CO":
+            print("CO")
