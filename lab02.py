@@ -13,14 +13,18 @@ stringList = []
 while True:
     text = input(
         str(
-            "Type [PM25, PM10, O3, CO, NO2, SO2, WS, WD, TEMP, RH, BP, RAIN] for Show or Type [EXIT] for End : "
+            "Type [PM25, PM10, O3, CO, NO2, SO2, WS, WD, TEMP, RH, BP, RAIN] for Show or Type [DEL] for delet list And Type [EXIT] for End : "
         )
     )
     txt = text.upper()
 
     if txt == "EXIT":
         break
-
+    elif txt == "DEL":
+        for v in stringList:
+            stringList.remove(v)
+            print("del=" + v)
+        continue
     stringList.append(txt)
 
     print("Station ID: " + obj["stations"][0]["stationID"])
