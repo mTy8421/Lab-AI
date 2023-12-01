@@ -35,3 +35,12 @@ class PuzzleState:
                 new_state.puzzle[new_state.blk],
             )
             new_state.blk -= 1
+        elif direction == 'right' and (new_state.blk + 1) % 3 != 0:
+            new_state.puzzle[new_state.blk], new_state.puzzle[new_state.blk + 1] = (
+                new_state.puzzle[new_state.blk + 1],
+                new_state.puzzle[new_state.blk],
+            )
+            new_state.blk += 1
+        else:
+            return None
+        return new_state
