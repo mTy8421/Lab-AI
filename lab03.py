@@ -81,9 +81,17 @@ if __name__ == '__main__':
     initial_state = PuzzleState(initial_puzzle)
     goal_state = PuzzleState(goal_puzzle)
 
-    solution_path = depth_limit_search(initial_state, goal_state, 20)
+    solution_path = depth_limit_search(initial_state, goal_state,10)
     print(('*'*100+'\n')*3)
     if solution_path:
         print(f"Solution Path {len(solution_path)} moves : \n{solution_path}")
+        
+        current_state = initial_state
+        for step, direction in enumerate(solution_path):
+            print(f"Step {step + 1}: Move {direction}")
+            current_state = current_state.move(direction)
+            print(current_state)
+            print('*' * 30)
+        
     else:
         print("No solution found.")
