@@ -6,9 +6,6 @@ class PuzzleState:
 
     def __str__(self):
         txt = ''
-        # [1,2,3,4,5,6,7,8,0]
-        # [1,2,3],[4,5,6],[7,8,9] -> index i = 0 [1,2,3],  i = 3 [4,5,6], i = 6 [7,8,0]
-        # [1,2,3] -> 1 2 3\n
         for i in range(0, self.size, 3):
             for j in range(3):
                 if j > 0:
@@ -16,8 +13,6 @@ class PuzzleState:
                 txt += str(self.puzzle[j+i])
             txt += '\n'
         return txt
-
-        # return '\n'.join([' '.join(map(str, self.puzzle[i:i + 3])) for i in range(0, self.size, 3)])
 
     def move(self, direction):
         new_state = PuzzleState(list(self.puzzle))
@@ -78,13 +73,9 @@ def depth_limit_search(initial_state, goal_state, limit = 5):
 
     return None
 
-# only run directly, __name__ variable is set to bet '__main__'
-# when it was imported, the __name__ will be set to file name (depth_8p)
 if __name__ == '__main__':
-    # Example usage:
-    # initial_puzzle = [1, 2, 3, 4, 0, 5, 6, 7, 8] # 18 steps
-    # initial_puzzle = [1, 3, 2, 4, 5, 6, 7, 8, 0]
-    initial_puzzle = [1,2,3,0,4,6,7,5,8] # 3 steps
+    
+    initial_puzzle = [1,2,3,0,4,6,7,5,8]
     goal_puzzle = [1, 2, 3, 4, 5, 6, 7, 8, 0]
 
     initial_state = PuzzleState(initial_puzzle)
